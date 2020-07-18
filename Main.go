@@ -51,7 +51,7 @@ func variableConversion() {
 
 }
 
-func main() {
+func _main() {
 	variable1()
 	variable2()
 	variableConversion()
