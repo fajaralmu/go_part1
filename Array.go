@@ -77,7 +77,7 @@ func printlns(val ...interface{}) {
 	}
 }
 
-func main() {
+func main_array() {
 	println("________ARRAY_______")
 	array()
 	arrayPointing()
