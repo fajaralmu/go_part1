@@ -21,9 +21,9 @@ func integer() {
 	**/
 }
 
-// func printValAndType(val, _type) {
-// 	fmt.Printf("Value: %v, Type: %T \n", val, _type)
-// }
+func printValAndType(val interface{}, _type interface{}) {
+	fmt.Printf("** Value: %v, Type: %T \n", val, _type)
+}
 
 func byteoperation() {
 	println("====byteoperation=====")
@@ -38,11 +38,11 @@ func byteoperation() {
 func complexNumber() {
 	println("====complexNumber=====")
 	var a complex64 = 1 + 2i
-	fmt.Printf("%v, %T\n", (a), (a))
-	fmt.Printf("%v, %T\n", real(a), real(a))
+	printValAndType((a), (a))
+	printValAndType(real(a), real(a))
 
 	var n complex128 = complex(5, 12)
-	fmt.Printf("%v, %T\n", (n), (n))
+	printValAndType((n), (n))
 }
 
 func strings() {
@@ -53,27 +53,32 @@ func strings() {
 
 	//TO ASCII//
 	b := []byte(s)
-	fmt.Printf("%v, %T\n", b, b)
+	printValAndType(b, b)
 }
 
 func runes() { //INT32
 	println("==== RUNES =====")
 	r := 'a'
-	fmt.Printf("%v, %T\n", r, r)
+	printValAndType(r, r)
 }
 
 func numerics() {
-
+	println("___NUMERICS___")
 	integer()
 	byteoperation()
 	complexNumber()
 
 }
 
-func main() {
+func texts() {
+	println("___TEXT___")
+	strings() //UTF - 8
+	runes()   //UTF - 32
+}
+
+func main_primitives() {
 	println("========PRIMITIVES=======")
 	boolean()
 	numerics()
-	strings()
-	runes()
+	texts()
 }
