@@ -25,7 +25,7 @@ func iotas() {
 	printValAndType(c, c)
 }
 
-func main() {
+func main_constants() {
 	println("____CONSTANTS_____")
 	naming()
 	iotas()
