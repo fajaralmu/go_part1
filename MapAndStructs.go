@@ -86,7 +86,7 @@ func reflection() {
 	println("Name:", field.Name, " TAG:", field.Tag)
 }
 
-func main() {
+func main_map_struct() {
 	println("____ARRAY AND STRUCTS____")
 	theMap()
 	theStruct()
