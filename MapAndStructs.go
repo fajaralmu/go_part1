@@ -60,6 +60,12 @@ func anonymousStruct() {
 type Animal struct {
 	Name   string `required max:"100"`
 	Origin string
+	//eat    func(food string)
+}
+
+func (animal Animal) eat(food string) (res int) {
+	fmt.Println("ANIMAL EATING:", food)
+	return 0
 }
 
 //Bird is an animal

@@ -66,7 +66,7 @@ func loopCollection() {
 	}
 }
 
-func main() {
+func main_loop() {
 	println("_________LOOP_________")
 	simpleLoop()
 	whileLoop()
