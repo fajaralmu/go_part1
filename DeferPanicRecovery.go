@@ -17,6 +17,7 @@ func deferFunction() {
 
 func handleMain(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(201)
+	w.Header().Add("Content-Type", "application/json")
 	w.Write([]byte("{\"name\":\"Hello Go\"}"))
 
 }
@@ -40,7 +41,7 @@ func deferFunction2() {
 
 }
 
-func main() {
+func main_defer_panic() {
 	println("____defer panic and recover___")
 	deferFunction()
 	deferFunction2()
