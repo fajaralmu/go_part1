@@ -57,7 +57,7 @@ func typeSwitch() {
 	}
 }
 
-func main() {
+func main_branching() {
 
 	if true {
 		println("IF Statements")
