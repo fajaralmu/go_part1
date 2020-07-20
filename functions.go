@@ -93,8 +93,12 @@ func anonymousFunction() {
 	println("myMethodHasResult:", result)
 }
 
-func (animal *Animal) editName(name string) {
-	animal.Name = name
+func (animal *Animal) editName(name []string) string {
+
+	for i := 0; i < len(name); i++ {
+		animal.Name += " " + name[i]
+	}
+	return animal.Name
 }
 
 func sturctMethod() {
@@ -104,7 +108,7 @@ func sturctMethod() {
 	animal.Name = "Cat"
 
 	fmt.Println("ANIMAL:", animal)
-	animal.editName("Catboy")
+	animal.editName([]string{"Catboy", "MAN"})
 	fmt.Println("ANIMAL Name edited:", animal)
 }
 
