@@ -21,7 +21,7 @@ func handleIndex(w http.ResponseWriter, r *http.Request) {
 	bird.canfly = false
 	//json.NewEncoder(w).Encode(bird)
 	w.Write([]byte("{\"name\":\"Hello Go\"}"))
-
+	fmt.Println("handleIndex END..")
 }
 
 func serve() {
@@ -32,9 +32,8 @@ func serve() {
 		panic(err.Error())
 	}
 
-	fmt.Println("APp Started..")
 }
 
-func main() {
+func main_web() {
 	serve()
 }
