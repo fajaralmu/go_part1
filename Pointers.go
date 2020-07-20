@@ -30,23 +30,23 @@ func sample2() {
 
 func structPointer() {
 	println("==structPointer==")
-	var obj *object
-	fmt.Println("*OBJ not initialized:", obj)
-	obj = &object{id: 10}
-	fmt.Println("OBJ initialized: ", obj)
-	fmt.Println("(*)OBJ initialized: ", *obj)
+	var obj *myObject
+	fmt.Println("*myObject not initialized:", obj)
+	obj = &myObject{id: 10}
+	fmt.Println("myObject initialized: ", obj)
+	fmt.Println("(*)myObject initialized: ", *obj)
 
 	//assign value
 	obj.id = 300
-	fmt.Println("(*)OBJ property has been changed initialized: ", *obj)
+	fmt.Println("(*)ikinikin property has been changed initialized: ", *obj)
 
 }
 
-type object struct {
+type myObject struct {
 	id int
 }
 
-func main() {
+func main_pointer() {
 
 	println("___POINTER___")
 	sample1()

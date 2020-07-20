@@ -63,6 +63,7 @@ type Animal struct {
 	//eat    func(food string)
 }
 
+//copy of animal.. cannot manipulate
 func (animal Animal) eat(food string) (res int) {
 	fmt.Println("ANIMAL EATING:", food)
 	return 0
