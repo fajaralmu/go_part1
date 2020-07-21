@@ -56,9 +56,20 @@ func typeConversion() {
 	}
 }
 
+func interfaceType() {
+	var i interface{} = 0
+	switch i.(type) {
+	case int:
+		println("Type Int")
+	case string:
+		println("Type String")
+	}
+}
+
 func main() {
 
 	sampleOneInterface()
 	sampleTwoInterface()
 	typeConversion()
+	interfaceType()
 }
