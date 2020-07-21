@@ -63,6 +63,10 @@ func function2() {
 	println("a:", a, "- b:", b)
 	substrac(&a, b)
 	println("a:", a)
+	f := substrac
+	println("a:", a, "- b:", b)
+	f(&a, b)
+	println("a:", a)
 
 }
 
@@ -112,7 +116,7 @@ func sturctMethod() {
 	fmt.Println("ANIMAL Name edited:", animal)
 }
 
-func main() {
+func main_func() {
 	function1()
 	function2()
 	function3()
