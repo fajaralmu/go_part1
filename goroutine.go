@@ -108,7 +108,7 @@ func theList() {
 	}
 }
 
-func main() {
+func main_goRoutine() {
 
 	gRSampleOne()
 	gRSampleTwo()
