@@ -9,6 +9,7 @@ package main
 //  - check race condiiton: command> go run race ...
 
 import (
+	"container/list"
 	"fmt"
 	"runtime"
 	"sync"
@@ -87,10 +88,31 @@ func sampleMaxProcs() {
 	fmt.Println("THreads: ", runtime.GOMAXPROCS(-1))
 }
 
+func theList() {
+	println("___theList___")
+
+	var myList *list.List = list.New()
+	myList.PushBack("1")
+	myList.PushBack("2")
+	myList.PushBack("3")
+
+	fmt.Println("List size: ", myList.Len())
+
+	println("__back - front__")
+	for e := myList.Back(); e != nil; e = e.Prev() {
+		fmt.Println("Value: ", e.Value)
+	}
+	println("__front - back__")
+	for e := myList.Front(); e != nil; e = e.Next() {
+		fmt.Println("Value: ", e.Value)
+	}
+}
+
 func main() {
 
 	gRSampleOne()
 	gRSampleTwo()
 	gRSampleThree()
 	sampleMaxProcs()
+	theList()
 }
