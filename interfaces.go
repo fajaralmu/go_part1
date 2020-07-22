@@ -66,7 +66,7 @@ func interfaceType() {
 	}
 }
 
-func main() {
+func main_interface() {
 
 	sampleOneInterface()
 	sampleTwoInterface()
