@@ -1,5 +1,13 @@
 package main
 
+//Best practives
+// #1 Don't create goroutines in libraries
+//  - Let cuntmer control concurrency
+// #2 WHen creating a goroutine, know how it will end
+//  - avids subtle memory leaks
+// #3 Check for race conditions at compile time
+//  - check race condiiton: command> go run race ...
+
 import (
 	"fmt"
 	"runtime"
@@ -71,9 +79,18 @@ func updateCounter() {
 
 }
 
+func sampleMaxProcs() {
+	println("_____-sampleMaxProcs______")
+
+	//GOMAXPROCS return peviously set thread
+	//negative values does not changing anything
+	fmt.Println("THreads: ", runtime.GOMAXPROCS(-1))
+}
+
 func main() {
 
 	gRSampleOne()
 	gRSampleTwo()
 	gRSampleThree()
+	sampleMaxProcs()
 }
